@@ -1,0 +1,233 @@
+/* General Set-up (Fonts, margins, background colors) */
+#container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+/* Question 0. Import a font and make all text in the body using that font. Check the homework instructions for more information!*/
+
+body {
+    margin: 50px auto;
+    max-width: 1000px;
+    color: #1d3557;
+    /* YOUR CODE HERE */
+    font-family: 'Shantell Sans', 'sans-serif';
+    
+}
+
+img {
+    border-radius: 100%;
+    width: 150px;
+    border: 4px solid #1d3557;
+    transition: ease-in-out 0.3s;
+}
+
+h1 {
+    font-size: 45px;
+    transition: ease-in-out 0.5s;
+    text-align: center;
+}
+
+/* Question 1. Add a hover effect for your h1 tag and img tag! You can change the background-color, color, opacity, or anything you want.*/
+h1:hover{
+    background-color:darkgoldenrod;
+    color:blue;
+    font-size: 500%;
+}
+img:hover{
+    background-color: crimson;
+    width: 300px;
+
+}
+
+
+
+/* Question 2. Add margin, padding, and borders to section tags! */
+section {
+    text-align:center;
+    /* YOUR CODE HERE */
+        width: 335px;
+        padding: 20px;
+        border: 12px solid gray;
+        margin: 5;
+}
+
+
+
+/* Question 3. Add different background colors for all the different sections, by selecting them via ids. */
+
+/* YOUR CODE HERE */
+#education {
+    background-color: cornflowerblue;
+    
+}
+#experience {
+    background-color: darkred;
+}
+#projects {
+    background-color: lightgreen;
+}
+
+#contact {
+    background-color: navajowhite;
+}
+
+
+/* Experience Section */
+
+/* Question 4a. This is a little tougher! Use CSS Flexbox to display your experiences as shown in the diagram.
+ Hint: If you're stuck with finding values that work, check the homework instructions document for some help!*/
+
+.experience-wrapper {
+    /* gap: 23px;
+    display:flex;
+    /* flex-wrap: wrap; */
+    /* justify-content: cent */
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.experience-list-item{
+    /* Tip: Feel free to change anything here (e.g. border, background-color, etc.). 
+    Changing the padding and width might throws thiings off, but experiment with it and see what looks good. */
+    border: 6px solid #124690;
+    text-align:center;
+    
+    padding: 10px 30px;
+    background-color: #a5d2ee;
+    border-radius: 20px;
+    font-style: oblique;
+
+    /* Tip: Add the transition attribute to make effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+    transition: ease-in-out 0.2s;
+
+}
+
+
+
+
+.experience-list-item:hover {
+    /* Tip: Feel free to change anything here (e.g. border, background-color, etc.). 
+    Changing the padding and width might throws thiings off, but experiment with it and see what looks good. */
+    /* border: 6px solid #124690;
+    text-align:center;
+    width: 250px;
+    padding: 10px 30px;
+    background-color: #a5d2ee;
+    border-radius: 20px;
+    font-style: oblique; */
+    opacity: .9;
+
+    /* Tip: Add the transition attribute to make effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+    transition: ease-in-out 0.5s;
+    box-shadow: inset 2000px  0 0 0 #54b3d6;
+  color: white;
+}
+
+
+
+/* Projects Section */
+
+/* Question 5. Use CSS Flexbox or Grid and hover effects for the Projects Section, 
+but use different hover effects from the Experiences section! */
+
+#projects {
+    width: 100%;
+}
+#education{
+    width: 100%
+}
+#experience{
+    width: 100%;
+}
+#contact{
+    width: 100%;
+}
+#project-wrapper{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+/* .project-list-item{
+    
+
+} */
+
+
+/* Contact Section */
+
+/* Question 6. Make your link pretty! */
+/* a {
+    /* YOUR CODE HERE */
+*/
+
+/* a:hover {
+    /* YOUR CODE HERE */
+*/
+
+/* a:before{
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+a:hover{
+    background-position: 0;
+}
+a:hover::before{
+    width: 100%;
+} */
+
+a {
+    text-decoration: none;
+  }
+  a {
+    background:
+      linear-gradient(
+        to right,
+        rgba(100, 200, 200, 1),
+        rgba(100, 200, 200, 1)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+  }
+  a:hover {
+    background-size: 0 3px, 100% 3px;
+  }
+/* Question 7. Let's make this a little more mobile-friendly! Use a media query/breakpoint to make
+project-list-item and experience-list-item divs have a width of 100% for smaller devices.*/
+
+/* Small devices (portrait tablets and large phones, 600px screen and up) */
+@media only screen and (max-width: 600px) {
+    /* YOUR CODE HERE */
+    .experience-list-item{
+        width: 100%;
+    }
+    .project-list-item{
+        width: 100%;
+    }
+}
